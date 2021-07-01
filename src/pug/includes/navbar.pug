@@ -1,0 +1,40 @@
+.hidden.fixed.z-10.inset-0.overflow-y-auto(id="menu-offcanvas")
+  .flex.min-h-screen
+    .fixed.inset-0.bg-gray-900.bg-opacity-75.transition-opacity.cursor-pointer(aria-hidden='true' id="menu-offcanvas-close")
+    .flex.items-center.inline-block.align-bottom.bg-white.text-left.overflow-hidden.shadow-2xl.transform.transition-all(class='dark:bg-gray-800 w-full md:w-1/2 lg:w-1/4')
+        .px-6.w-full(class="md:px-12")
+            ul.text-purple-800.font-semibold.text-2xl(class="dark:text-white")
+                li.flex.justify-center.my-6(class="hover:text-purple-900 dark:hover:text-gray-200")
+                    a.flex.items-center(href="#!")
+                        svg.feather.feather-zap.mr-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                            polygon(points='13 2 3 14 12 14 11 22 21 10 12 10 13 2')
+                        |Bienvenida
+                li.flex.justify-center.my-6(class="hover:text-purple-900 dark:hover:text-gray-200")
+                    a.flex.items-center(href="#!")
+                        svg.feather.feather-award.mr-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                            circle(cx='12' cy='8' r='7')
+                            polyline(points='8.21 13.89 7 23 12 20 17 23 15.79 13.88')
+                        |Estudios
+                li.flex.justify-center.my-6(class="hover:text-purple-900 dark:hover:text-gray-200")
+                    a.flex.items-center(href="#!")
+                        svg.feather.feather-cpu.mr-2(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                            rect(x='4' y='4' width='16' height='16' rx='2' ry='2')
+                            rect(x='9' y='9' width='6' height='6')
+                            line(x1='9' y1='1' x2='9' y2='4')
+                            line(x1='15' y1='1' x2='15' y2='4')
+                            line(x1='9' y1='20' x2='9' y2='23')
+                            line(x1='15' y1='20' x2='15' y2='23')
+                            line(x1='20' y1='9' x2='23' y2='9')
+                            line(x1='20' y1='14' x2='23' y2='14')
+                            line(x1='1' y1='9' x2='4' y2='9')
+                            line(x1='1' y1='14' x2='4' y2='14')
+                        |Conocimientos
+navbar(class='px-4 py-2 flex flex-wrap justify-center items-center bg-white dark:bg-gray-900 text-purple-800 dark:text-white border-b-2 border-purple-600 dark:border-white shadow-md transition-all ease-in-out duration-300')
+    .z-50.w-auto.flex.flex-wrap.justify-center.items-center
+        button.flex.items-center.p-0.hamburger.hamburger--minus(type='button')
+            span.hamburger-box
+                span.hamburger-inner
+    div.w-auto.flex-grow.text-center
+        h1.text-xl.font-bold(class="md:text-3xl") Curriculum
+    div(class="switch-mode flex flex-wrap items-center w-14 px-0.5 h-8 border-2 border-white bg-purple-400 dark:bg-gray-600 rounded-full")
+        div(class="bg-white h-6 w-6 rounded-full")
