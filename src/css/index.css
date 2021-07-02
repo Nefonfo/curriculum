@@ -1,5 +1,4 @@
-@import "./utils/hamburger.css";
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "./components/hamburger.css";
+@import "tailwindcss/utilities";

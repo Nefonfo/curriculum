@@ -1,6 +1,8 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -24,10 +26,16 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                  "style-loader",
-                  { loader: "css-loader", options: { importLoaders: 1 } },
-                  "postcss-loader",
-                ],
+                    MiniCssExtractPlugin.loader,
+                    /*'style-loader',*/
+                    {
+                      loader: 'css-loader',
+                      options: {
+                        importLoaders: 1
+                      }
+                    },
+                    'postcss-loader'
+                ]
             },
             { 
                 test: /\.pug$/,
@@ -47,10 +55,11 @@ module.exports = {
                 }).apply(compiler);
             },
         ],
-        runtimeChunk: true
     },
     plugins: [
         new BundleAnalyzerPlugin(),
+        new MiniCssExtractPlugin(),
+        new CssMinimizerPlugin(),
         new HtmlWebpackPlugin({
             template: './src/pug/index.pug'
         }),
