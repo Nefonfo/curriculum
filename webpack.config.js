@@ -14,6 +14,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(png|jpe?g|gif|svg|webmanifest|ico|xml)$/i,
+                loader: 'file-loader',
+                options: {
+                  name: 'assets/img/[name].[ext]',
+                },
+            },
+            {
                 test: /\.js$/i,
                 include: path.resolve(__dirname, 'src/js'),
                 use: {

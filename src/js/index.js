@@ -2,6 +2,7 @@ import '../css/index.css';
 import SwitchMode from './utils/switchMode';
 import ButtonMenu from './utils/buttonMenu';
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const switch_mode = new SwitchMode(document.documentElement, '.switch-mode','dark', 'nfDarkMode');
     switch_mode.init();
