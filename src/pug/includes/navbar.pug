@@ -29,12 +29,12 @@
                             line(x1='1' y1='9' x2='4' y2='9')
                             line(x1='1' y1='14' x2='4' y2='14')
                         |Conocimientos
-navbar(class='px-4 py-2 flex flex-wrap justify-center items-center bg-white dark:bg-gray-900 text-purple-800 dark:text-white border-b-2 border-purple-600 dark:border-white shadow-md transition-all ease-in-out duration-300')
-    .z-50.w-auto.flex.flex-wrap.justify-center.items-center
-        button.flex.items-center.p-0.hamburger.hamburger--minus(type='button')
+nav(class='z-50 inset-0 sticky px-4 py-3 flex flex-wrap justify-center items-center bg-white dark:bg-gray-900 text-purple-800 dark:text-white border-b-2 border-purple-600 dark:border-white shadow-md transition-all ease-in-out duration-300')
+    .w-auto.flex.flex-wrap.justify-center.items-center
+        button.flex.items-center.p-0.hamburger.hamburger--minus(type='button' role='button' aria-label='menu')
             span.hamburger-box
                 span.hamburger-inner
     div.w-auto.flex-grow.text-center
         h1.text-xl.font-bold(class="md:text-3xl") Curriculum
-    div(class="switch-mode flex flex-wrap items-center w-14 px-0.5 h-8 border-2 border-white bg-purple-400 dark:bg-gray-600 rounded-full")
+    div(class="switch-mode cursor-pointer flex flex-wrap items-center w-14 px-0.5 h-8 border-2 border-white bg-purple-400 dark:bg-gray-600 rounded-full")
         div(class="bg-white h-6 w-6 rounded-full")

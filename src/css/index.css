@@ -1,4 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "./components/hamburger.css";
 @import "tailwindcss/utilities";
+
+body::-webkit-scrollbar {
+    @apply transition-all duration-300 ease-in-out;    
+    width: 0.8rem;
+}
+   
+body::-webkit-scrollbar-track {
+    @apply transition-all duration-300 ease-in-out;
+    @apply bg-purple-100;
+}
+
+.dark body::-webkit-scrollbar-track {
+    @apply bg-gray-600;
+}
+
+body::-webkit-scrollbar-thumb {
+    @apply transition-all duration-300 ease-in-out;
+    @apply bg-purple-400 rounded-full;
+}
+
+.dark body::-webkit-scrollbar-thumb {
+    @apply bg-gray-400;
+}

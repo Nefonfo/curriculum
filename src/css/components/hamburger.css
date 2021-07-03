@@ -26,26 +26,18 @@
 .hamburger.is-active:hover {
   opacity: 0.7;
 }
-
-.dark {
-  .hamburger.is-active .hamburger-inner{
-    @media (prefers-color-scheme: dark) {
-      @apply bg-white;
-    }
-  
-    &::before, &::after{
-      @media (prefers-color-scheme: dark) {
-        @apply bg-white;
-      }
-    }
-  }  
-}
-
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
   @apply bg-purple-800;
 }
+
+.dark .hamburger.is-active .hamburger-inner,
+.dark .hamburger.is-active .hamburger-inner::before,
+.dark .hamburger.is-active .hamburger-inner::after {
+  @apply bg-white;
+}
+
 
 .hamburger-box {
   width: 40px;
@@ -59,19 +51,6 @@
   top: 50%;
   margin-top: -2px;
 }
-.dark {
-  .hamburger-inner {
-    @media (prefers-color-scheme: dark) {
-      @apply bg-white;
-    }
-  
-    &::before, &::after {
-      @media (prefers-color-scheme: dark) {
-        @apply bg-white;
-      }
-    }
-  }
-}
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -84,6 +63,16 @@
   transition-duration: 0.15s;
   transition-timing-function: ease;
 }
+
+
+.dark .hamburger-inner,
+.dark .hamburger-inner::before,
+.dark .hamburger-inner::after {
+  @apply bg-white;
+}
+
+
+
 .hamburger-inner::before,
 .hamburger-inner::after {
   content: "";
@@ -97,8 +86,8 @@
 }
 
 /*
-     * Minus
-     */
+   * Minus
+   */
 .hamburger--minus .hamburger-inner::before,
 .hamburger--minus .hamburger-inner::after {
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
