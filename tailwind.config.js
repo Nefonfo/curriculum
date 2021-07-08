@@ -14,7 +14,8 @@ module.exports = {
     },
     theme: {
       fontFamily: {
-        sans: ['"Lato"', 'sans-serif']
+        sans: ['"Lato"', 'sans-serif'],
+        serif: ['"Raleway"', 'sans-serif']
       }
     },
     variants: {},

@@ -1,0 +1,7 @@
+.designer-banner {
+    background-image: url('../assets/img/undraw_designer_light.svg');
+}
+
+.dark .designer-banner {
+    background-image: url('../assets/img/undraw_designer_dark.svg');
+}
