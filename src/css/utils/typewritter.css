@@ -1,0 +1,27 @@
+.typewritter {
+    @apply border-r-2;
+    animation: blink-light 1s step-end infinite;
+}
+
+.dark .typewritter {
+    animation: blink-dark 1s step-end infinite;
+}
+
+
+@keyframes blink-light {
+    from, to { 
+        @apply border-transparent;
+    }
+    50% { 
+        @apply border-purple-700;
+    }
+}
+
+@keyframes blink-dark {
+    from, to { 
+        @apply border-transparent;
+    }
+    50% { 
+        @apply border-white;
+    }
+}

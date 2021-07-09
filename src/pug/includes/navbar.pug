@@ -1,4 +1,4 @@
-.hidden.fixed.z-10.inset-0.overflow-y-auto(id="menu-offcanvas")
+.hidden.fixed.z-10.inset-0.overflow-y-auto(class="md:hidden" id="menu-offcanvas")
   .flex.min-h-screen
     .fixed.inset-0.bg-gray-900.bg-opacity-75.transition-opacity.cursor-pointer(aria-hidden='true' id="menu-offcanvas-close")
     .flex.items-center.inline-block.align-bottom.bg-white.text-left.overflow-hidden.shadow-2xl.transform.transition-all(class='dark:bg-gray-800 w-full md:w-1/2 lg:w-1/4')
@@ -29,12 +29,19 @@
                             line(x1='1' y1='9' x2='4' y2='9')
                             line(x1='1' y1='14' x2='4' y2='14')
                         |Conocimientos
-nav(class='z-50 inset-0 sticky px-4 py-4 flex flex-wrap justify-center items-center bg-white dark:bg-gray-900 text-purple-800 dark:text-white border-b-2 border-purple-600 dark:border-white shadow-md transition-all ease-in-out duration-300')
-    .w-auto.flex.flex-wrap.justify-center.items-center
+nav(class='z-50 inset-0 sticky p-4 flex flex-wrap justify-center items-center bg-white dark:bg-gray-900 text-purple-800 dark:text-white border-b-2 border-purple-600 dark:border-white shadow-md transition-colors ease-in-out duration-300')
+    .w-auto.flex.flex-wrap.justify-center.items-center(class="md:hidden md:w-0")
         button.flex.items-center.p-0.hamburger.hamburger--minus(type='button' role='button' aria-label='menu')
             span.hamburger-box
                 span.hamburger-inner
-    div.w-auto.flex-grow.text-center
+    .w-auto.flex-grow(class="text-center md:text-left md:ml-4")
         h1.text-xl.font-bold(class="md:text-3xl") Curriculum
-    div(class="switch-mode cursor-pointer flex flex-wrap items-center w-14 px-0.5 h-8 border-2 border-white bg-purple-400 dark:bg-gray-600 rounded-full")
+    ul.w-auto(class="hidden md:flex text-lg")
+        li(class="px-1.5")
+            a(href="#welcome" class="px-4 py-2.5 rounded-md hover:bg-purple-700 hover:text-white dark:hover:bg-gray-600 transition-colors duration-300 ease-in-out") Bienvenida
+        li(class="px-1.5")
+            a(href="#!" class="px-4 py-2.5 rounded-md hover:bg-purple-700 hover:text-white dark:hover:bg-gray-600 transition-colors duration-300 ease-in-out") Estudios
+        li(class="px-1.5")
+            a(href="#!" class="px-4 py-2.5 rounded-md hover:bg-purple-700 hover:text-white dark:hover:bg-gray-600 transition-colors duration-300 ease-in-out") Conocimientos
+    div(class="md:ml-4 switch-mode cursor-pointer flex flex-wrap items-center w-14 px-0.5 h-8 border-2 border-white bg-purple-400 dark:bg-gray-600 rounded-full transition-colors duration-300 ease-in-out")
         div(class="bg-white h-6 w-6 rounded-full")

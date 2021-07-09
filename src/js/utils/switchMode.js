@@ -20,9 +20,6 @@ class SwitchMode {
             this.set_storage(this.active);
             this.element_class.classList.toggle(this.active_class);
             this.element_click.classList.toggle('justify-end')
-            if(this.active) {
-                
-            }
         });
     }
 

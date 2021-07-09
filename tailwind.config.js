@@ -18,6 +18,7 @@ module.exports = {
         serif: ['"Raleway"', 'sans-serif']
       }
     },
-    variants: {},
+    variants: {
+    },
     plugins: [],
 }
