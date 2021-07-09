@@ -1,14 +1,14 @@
 .typewritter {
-    @apply border-r-2;
-    animation: blink-light 1s step-end infinite;
+    @apply border-r-4 border-purple-700;
+    /*animation: blinkl 1s step-end infinite;*/
 }
 
 .dark .typewritter {
-    animation: blink-dark 1s step-end infinite;
+    @apply border-gray-300;
+    /*animation: blinkd 1s step-end infinite;*/
 }
-
-
-@keyframes blink-light {
+/* PROBLEMS WITH WEBPACK KEYFRAMES... 
+@keyframes blinkl {
     from, to { 
         @apply border-transparent;
     }
@@ -17,11 +17,11 @@
     }
 }
 
-@keyframes blink-dark {
+@keyframes blinkd {
     from, to { 
         @apply border-transparent;
     }
     50% { 
         @apply border-white;
     }
-}
+}*/
